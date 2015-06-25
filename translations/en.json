@@ -1,0 +1,31 @@
+{
+  "app": {
+    "package": "repeat-macro-warnings",
+    "description": {
+      "value": "Receive a warning if a user has seen a macro in the past.",
+      "title": "app description"
+    },
+    "parameters": {
+      "macroPrefix": {
+        "label": {
+          "value": "Macro Prefix",
+          "title": "Macro Prefix"
+        },
+        "helpText": {
+          "value": "Enter the prefix you set for the tags your macros apply.",
+          "title": "helpText for the Macro Prefix field."
+        }
+      },
+      "duplicateField": {
+        "label": {
+          "value": "Duplicate Macro Field ID",
+          "title": "Duplicate Macro Field ID"
+        },
+        "helpText":{
+          "value": "Enter your Duplicate Macro Field ID here. Should look like: custom_field_24937008",
+          "title": "helpText for Duplicate Macro Field ID"
+        }
+      }
+    }
+  }
+}
