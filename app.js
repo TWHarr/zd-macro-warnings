@@ -65,6 +65,7 @@
       // Gather all the information needed to pass to the Zendesk search API.
       var ticket = this.ticket();
       var id = ticket.requester().id();
+      var curTicket = ticket.id()
       var d = new Date();
       var year = d.getFullYear()-1;
       var month = d.getMonth()+1;
@@ -75,11 +76,12 @@
         request.done( function(data) {
           var repeatIDs = [];
           for (var i = 0; i < data.results.length; i++){
-            repeatIDs.push(data.results[i].id);
-
+            if (data.results[i].id !== curTicket) {
+              repeatIDs.push(data.results[i].id);
+            }
           }
           // if prior macros are found:
-          if (data.count !== 0) {
+          if (repeatIDs.length > 0) {
             // popup warning
             var r = confirm("Warning!\n\nThe player has already seen this macro "+
               data.count + " time(s) within the last year.\n\nChoose OK if you"+
