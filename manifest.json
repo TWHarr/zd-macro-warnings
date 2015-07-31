@@ -17,10 +17,6 @@
       "type": "text",
       "default": "macro",
       "required": true
-    },
-    {"name": "duplicateField",
-      "type": "text",
-      "required": true
     }
   ]
 }

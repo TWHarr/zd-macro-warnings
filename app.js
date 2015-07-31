@@ -44,7 +44,7 @@
     // Grab initial tags.
     checkInitialTags: function(){
       prefix = this.setting('macroPrefix');
-      duplicateField = this.setting('duplicateField');
+      duplicateField = this.requirement('duplicateField');
       tagsOld.length = 0;
       this.pullTags(tagsOld);
       },

@@ -1,0 +1,8 @@
+{
+  "ticket_fields": {
+    "duplicate_macro": {
+      "type": "checkbox",
+      "title": "Duplicate Macro Sent"
+    }
+  }
+}
