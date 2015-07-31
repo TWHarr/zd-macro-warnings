@@ -45,7 +45,7 @@
     checkInitialTags: function(){
       prefix = this.setting('macroPrefix');
       var duplicate = this.requirement('duplicateField');
-      duplicateField = this.ticketFields('custom_field_'+duplicate.requirement_id)
+      duplicateField = this.ticketFields('custom_field_'+duplicate.requirement_id);
       tagsOld.length = 0;
       this.pullTags(tagsOld);
       },
@@ -66,7 +66,7 @@
       // Gather all the information needed to pass to the Zendesk search API.
       var ticket = this.ticket();
       var id = ticket.requester().id();
-      var curTicket = ticket.id()
+      var curTicket = ticket.id();
       var d = new Date();
       var year = d.getFullYear()-1;
       var month = d.getMonth()+1;
